@@ -21,24 +21,24 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
   const [loading, setLoading] = useState(false)
   const [selectedOptions, setSelectedOptions] = useState<SelectedOptions>({})
 
-  // useEffect(() => {
-  //   selectDefaultOptionFromProduct(product, setSelectedOptions)
-  // }, [product])
+  useEffect(() => {
+    selectDefaultOptionFromProduct(product, setSelectedOptions)
+  }, [product])
 
-  // const variant = getProductVariant(product, selectedOptions)
-  // const addToCart = async () => {
-  //   setLoading(true)
-  //   try {
-  //     await addItem({
-  //       productId: String(product.id),
-  //       variantId: String(variant ? variant.id : product.variants[0]?.id),
-  //     })
-  //     openSidebar()
-  //     setLoading(false)
-  //   } catch (err) {
-  //     setLoading(false)
-  //   }
-  // }
+  const variant = getProductVariant(product, selectedOptions)
+  const addToCart = async () => {
+    setLoading(true)
+    try {
+      await addItem({
+        productId: String(product.id),
+        variantId: String(variant ? variant.id : product.variants[0]?.id),
+      })
+      openSidebar()
+      setLoading(false)
+    } catch (err) {
+      setLoading(false)
+    }
+  }
 
   return (
     <div className={className}>
@@ -71,7 +71,7 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
           </Button>
         )}
       </div>
-      {/* <div className="mt-6">
+      <div className="mt-6">
         <Collapse title="Care">
           This is a limited edition production run. Printing starts when the
           drop ends.
@@ -81,7 +81,7 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
           drop ends. Reminder: Bad Boys For Life. Shipping may take 10+ days due
           to COVID-19.
         </Collapse>
-      </div> */}
+      </div>
     </div>
   )
 }

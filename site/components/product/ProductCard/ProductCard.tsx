@@ -80,7 +80,7 @@ const ProductCard: FC<Props> = ({
                 </div>
               </div>
             )}
-            {/* <div className={s.imageContainer}>
+            <div className={s.imageContainer}>
               {product?.images && (
                 <div>
                   <Image
@@ -95,7 +95,7 @@ const ProductCard: FC<Props> = ({
                   />
                 </div>
               )}
-            </div> */}
+            </div>
           </>
         )}
 

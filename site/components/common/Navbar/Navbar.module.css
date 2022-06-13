@@ -18,7 +18,7 @@
 }
 
 .link:hover {
-  @apply text-accent-9;
+  @apply text-accent-8;
 }
 
 .link:focus {

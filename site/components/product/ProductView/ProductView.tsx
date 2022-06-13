@@ -27,11 +27,11 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
       <Container className="max-w-none w-full" clean>
         <div className={cn(s.root, 'fit')}>
           <div className={cn(s.main, 'fit')}>
-            {/* <ProductTag
+            <ProductTag
               name={product.name}
               price={`${price} ${product.price?.currencyCode}`}
               fontSize={32}
-            /> */}
+            />
             <div className={s.sliderContainer}>
               <ProductSlider key={product.id}>
                 {product.images.map((image, i) => (
@@ -58,11 +58,11 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
             )}
           </div>
 
-          {/* <ProductSidebar
+          <ProductSidebar
             key={product.id}
             product={product}
             className={s.sidebar}
-          /> */}
+          />
         </div>
         <hr className="mt-7 border-accent-2" />
         <section className="py-12 px-6 mb-10">
@@ -73,7 +73,7 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
                 key={p.path}
                 className="animated fadeIn bg-accent-0 border border-accent-2"
               >
-                {/* <ProductCard
+                <ProductCard
                   noNameTag
                   product={p}
                   key={p.path}
@@ -83,29 +83,13 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
                     width: 300,
                     height: 300,
                   }}
-                /> */}
+                />
               </div>
             ))}
           </div>
         </section>
       </Container>
-      {/* <SEO
-        title={product.name}
-        description={product.description}
-        openGraph={{
-          type: 'website',
-          title: product.name,
-          description: product.description,
-          images: [
-            {
-              url: product.images[0]?.url!,
-              width: '800',
-              height: '600',
-              alt: product.name,
-            },
-          ],
-        }} */}
-      />
+      
     </>
   )
 }

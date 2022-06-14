@@ -18,39 +18,7 @@ interface NavbarProps {
 
 const Navbar: FC<NavbarProps> = ({ links }) => (
   <NavbarRoot>
-    <Container clean className="mx-auto max-w-8xl px-6">
-      <div className={s.nav}>
-        <div className="flex items-center flex-1">
-          <Link href="/">
-            <a className={s.logo} aria-label="Logo">
-              <Logo />
-            </a>
-          </Link>
-        </div>
-        <div className="flex items-center flex-1">
-          <p >
-            Use CODE FIRST10 FOR 10% OFF YOUR FIRST ORDER
-          </p>
-        </div>
-        {process.env.COMMERCE_SEARCH_ENABLED && (
-          <div className="justify-center flex-1 hidden lg:flex">
-            
-          </div>
-        )}
-        <div className="flex items-center justify-end flex-1 space-x-8">
-          <Link href="/">
-            <a className={s.logo} aria-label="Logo">
-              <Logo />
-            </a>
-          </Link>
-        </div>
-      </div>
-      {process.env.COMMERCE_SEARCH_ENABLED && (
-        <div className="flex pb-4 lg:px-6 lg:hidden">
-          <Searchbar id="mobile-search" />
-        </div>
-      )}
-    </Container>
+    
     <Container clean className="mx-auto bg-white max-w-8xl px-6">
       <div className={s.nav}>
         <div className="flex items-center flex-1">
@@ -80,6 +48,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
         </div>
         <div className="flex items-center flex-1">
           <Searchbar />
+          <UserNav />
           <Button >USD</Button>
           <Button >CART</Button>
 

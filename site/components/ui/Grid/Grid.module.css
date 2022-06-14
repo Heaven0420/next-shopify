@@ -24,11 +24,11 @@
 
   &.filled {
     & > *:nth-child(6n + 1) {
-      @apply bg-violet;
+      @apply bg-black;
     }
 
     & > *:nth-child(6n + 2) {
-      @apply bg-accent-8;
+      @apply bg-white;
     }
 
     & > *:nth-child(6n + 3) {

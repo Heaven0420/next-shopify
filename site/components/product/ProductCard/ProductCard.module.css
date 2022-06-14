@@ -112,3 +112,7 @@
 .root:global(.secondary) .header span {
   @apply bg-accent-0 text-accent-9;
 }
+
+.white {
+  font-color:  white;
+}

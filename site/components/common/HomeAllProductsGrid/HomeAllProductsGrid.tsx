@@ -52,7 +52,7 @@ const HomeAllProductsGrid: FC<Props> = ({
         </div>
       </div>
       <div className="flex-1">
-        {/* <Grid layout="normal">
+        <Grid layout="normal">
           {products.map((product) => (
             <ProductCard
               key={product.path}
@@ -64,7 +64,7 @@ const HomeAllProductsGrid: FC<Props> = ({
               }}
             />
           ))}
-        </Grid> */}
+        </Grid>
       </div>
     </div>
   )
